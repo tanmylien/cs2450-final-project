@@ -74,25 +74,25 @@ public class CupcakeShopUI extends JFrame {
       
         JPanel productPanel = new JPanel(new GridLayout(6, 3, 5, 5));
        
-        addProductToGrid(productPanel, "Cupcake A", "$12", "C:\\Users\\ttan3\\Downloads\\cupcakea.jpg");
-        addProductToGrid(productPanel, "Cupcake B", "$11", "C:\\Users\\ttan3\\Downloads\\cupcakeb.jpg");
-        addProductToGrid(productPanel, "Cupcake C", "$15", "C:\\Users\\ttan3\\Downloads\\cupcakec.jpg");
-        addProductToGrid(productPanel, "Cupcake D", "$19", "C:\\Users\\ttan3\\Downloads\\cupcaked.jpg");
-        addProductToGrid(productPanel, "Cupcake E", "$11", "C:\\Users\\ttan3\\Downloads\\cupcakee.jpg");
-        addProductToGrid(productPanel, "Cupcake F", "$10", "C:\\Users\\ttan3\\Downloads\\cupcakef.jpg");
-        addProductToGrid(productPanel, "Cupcake G", "$10", "C:\\Users\\ttan3\\Downloads\\cupcakeg.jpg");
-        addProductToGrid(productPanel, "Cupcake H", "$10", "C:\\Users\\ttan3\\Downloads\\cupcakeh.jpg");
-        addProductToGrid(productPanel, "Cupcake I", "$10", "C:\\Users\\ttan3\\Downloads\\cupcakei.jpg");
-        addProductToGrid(productPanel, "Cupcake J", "$10", "C:\\Users\\ttan3\\Downloads\\cupcakej.jpg");
-        addProductToGrid(productPanel, "Cupcake K", "$12", "C:\\Users\\ttan3\\Downloads\\cupcakek.jpg");
-        addProductToGrid(productPanel, "Cupcake L", "$13", "C:\\Users\\ttan3\\Downloads\\cupcakel.jpg");
-        addProductToGrid(productPanel, "Cupcake M", "$14", "C:\\Users\\ttan3\\Downloads\\cupcakem.jpg");
-        addProductToGrid(productPanel, "Cupcake N", "$19", "C:\\Users\\ttan3\\Downloads\\cupcakea.png");
-        addProductToGrid(productPanel, "Cupcake O", "$21", "C:\\Users\\ttan3\\Downloads\\cupcakea.png");
-        addProductToGrid(productPanel, "Cupcake P", "$13", "C:\\Users\\ttan3\\Downloads\\cupcakea.png");
-        addProductToGrid(productPanel, "Cupcake Q", "$12", "C:\\Users\\ttan3\\Downloads\\cupcakea.png");
-        addProductToGrid(productPanel, "Cupcake R", "$14", "C:\\Users\\ttan3\\Downloads\\cupcakea.png");
-        addProductToGrid(productPanel, "Cupcake S", "$15", "C:\\Users\\ttan3\\Downloads\\cupcakea.png");
+        addProductToGrid(productPanel, "Cupcake A", "$12", "final_project/images/cupcakea.jpg");
+        addProductToGrid(productPanel, "Cupcake B", "$11", "final_project/images/cupcakeb.jpg");
+        addProductToGrid(productPanel, "Cupcake C", "$15", "final_project/images/cupcakec.jpg");
+        addProductToGrid(productPanel, "Cupcake D", "$19", "final_project/images/cupcaked.jpg");
+        addProductToGrid(productPanel, "Cupcake E", "$11", "final_project/images/cupcakee.jpg");
+        addProductToGrid(productPanel, "Cupcake F", "$10", "final_project/images/cupcakef.jpg");
+        addProductToGrid(productPanel, "Cupcake G", "$10", "final_project/images/cupcakeg.jpg");
+        addProductToGrid(productPanel, "Cupcake H", "$10", "final_project/images/cupcakeh.jpg");
+        addProductToGrid(productPanel, "Cupcake I", "$10", "final_project/images/cupcakei.jpg");
+        addProductToGrid(productPanel, "Cupcake J", "$10", "final_project/images/cupcakej.jpg");
+        addProductToGrid(productPanel, "Cupcake K", "$12", "final_project/images/cupcakek.jpg");
+        addProductToGrid(productPanel, "Cupcake L", "$13", "final_project/images/cupcakel.jpg");
+        addProductToGrid(productPanel, "Cupcake M", "$14", "final_project/images/cupcakem.jpg");
+        addProductToGrid(productPanel, "Cupcake N", "$19", "final_project/images/cupcakea.png");
+        addProductToGrid(productPanel, "Cupcake O", "$21", "final_project/images/cupcakea.png");
+        addProductToGrid(productPanel, "Cupcake P", "$13", "final_project/images/cupcakea.png");
+        addProductToGrid(productPanel, "Cupcake Q", "$12", "final_project/images/cupcakea.png");
+        addProductToGrid(productPanel, "Cupcake R", "$14", "final_project/images/cupcakea.png");
+        addProductToGrid(productPanel, "Cupcake S", "$15", "final_project/images/cupcakea.png");
 
       
         JScrollPane scrollPane = new JScrollPane(productPanel);
