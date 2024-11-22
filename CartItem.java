@@ -1,4 +1,4 @@
-package model;
+package final_project;
 
 public class CartItem {
     private Product product;

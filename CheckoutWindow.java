@@ -1,6 +1,6 @@
-package gui;
+package final_project;
 
-import model.Cart;
+import final_project.Cart;
 
 import javax.swing.*;
 import java.awt.*;

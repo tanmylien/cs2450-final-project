@@ -1,4 +1,4 @@
-package gui;
+package final_project;
 
 import model.Cart;
 import model.Product;

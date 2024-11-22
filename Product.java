@@ -1,4 +1,4 @@
-package model;
+package final_project;
 
 public class Product {
     private String name;
