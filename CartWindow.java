@@ -1,4 +1,4 @@
-package final_project;
+package gui;
 
 import model.Cart;
 import model.CartItem;
@@ -15,13 +15,15 @@ public class CartWindow extends JFrame {
         this.cart = cart;
 
         setTitle("Your Cart");
-        setSize(500, 400);
+        setSize(700, 500);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout());
         setLocationRelativeTo(null);
 
+
         itemsPanel = new JPanel();
         itemsPanel.setLayout(new BoxLayout(itemsPanel, BoxLayout.Y_AXIS));
+        itemsPanel.setBackground(Color.blue);
 
         loadCartItems();
 
@@ -30,15 +32,22 @@ public class CartWindow extends JFrame {
 
         // Khu vực hiển thị tổng tiền và nút Checkout
         JPanel bottomPanel = new JPanel(new BorderLayout());
+        bottomPanel.setBackground(new Color(173, 216, 230));
 
         // Hiển thị tổng tiền ở bên trái
-        totalPriceLabel = new JLabel("Total: $" + calculateTotalPrice());
+        totalPriceLabel = new JLabel("Total: $" + String.format("%.2f",calculateTotalPrice()));
         totalPriceLabel.setFont(new Font("Arial", Font.BOLD, 14));
         bottomPanel.add(totalPriceLabel, BorderLayout.WEST);
 
         // Nút Checkout ở bên phải
-        JButton checkoutButton = new JButton("Checkout");
+        JButton checkoutButton = new JButton("CHECKOUT");
         checkoutButton.setPreferredSize(new Dimension(100, 30));
+        checkoutButton.setFont(new Font("Times New Roman", Font.BOLD,14));
+        checkoutButton.setBackground(Color.pink);
+        checkoutButton.setForeground(Color.black);
+        checkoutButton.setFocusPainted(false);
+        checkoutButton.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
+        checkoutButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         checkoutButton.addActionListener(e -> proceedToCheckout());
         bottomPanel.add(checkoutButton, BorderLayout.EAST);
 
@@ -50,7 +59,8 @@ public class CartWindow extends JFrame {
     // Hàm xử lý khi nhấn nút Checkout
     private void proceedToCheckout() {
         if (cart.getItems().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Your cart is empty. Add items to proceed.", "Empty Cart", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Your cart is empty. Add items to proceed.", "Empty Cart",
+                    JOptionPane.WARNING_MESSAGE);
         } else {
             dispose(); // Đóng cửa sổ CartWindow
             new CheckoutWindow(cart); // Mở cửa sổ CheckoutWindow
@@ -59,7 +69,7 @@ public class CartWindow extends JFrame {
 
     // Tính tổng tiền đơn hàng
     private double calculateTotalPrice() {
-        double total = 0.0;
+        double total = 0.00;
         for (CartItem item : cart.getItems()) {
             total += item.getTotalPrice();
         }
@@ -72,23 +82,41 @@ public class CartWindow extends JFrame {
 
         for (CartItem item : cart.getItems()) {
             JPanel itemPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 10));
-            itemPanel.setPreferredSize(new Dimension(450, 100));
+            itemPanel.setPreferredSize(new Dimension(450, 140));
             itemPanel.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
 
             ImageIcon imageIcon = new ImageIcon(getClass().getResource("/" + item.getProduct().getImagePath()));
             JLabel imageLabel = new JLabel();
-            Image image = imageIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH);
+            Image image = imageIcon.getImage().getScaledInstance(90, 90, Image.SCALE_SMOOTH);
             imageLabel.setIcon(new ImageIcon(image));
             itemPanel.add(imageLabel);
 
             JLabel nameLabel = new JLabel(item.getProduct().getName());
-            nameLabel.setFont(new Font("Arial", Font.BOLD, 14));
+            nameLabel.setFont(new Font("Times New Roman", Font.BOLD, 16));
+            nameLabel.setBorder(BorderFactory.createEtchedBorder());
             itemPanel.add(nameLabel);
 
             JPanel quantityPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 5, 5));
             JButton decreaseButton = new JButton("-");
+            decreaseButton.setPreferredSize(new Dimension(40,30));
+            decreaseButton.setFont(new Font("Times New Roman", Font.BOLD,14));
+            decreaseButton.setBackground(Color.pink);
+            decreaseButton.setForeground(Color.black);
+            decreaseButton.setFocusPainted(false);
+            decreaseButton.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
+            decreaseButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+
             JLabel quantityLabel = new JLabel(String.valueOf(item.getQuantity()));
+            quantityLabel.setFont(new Font("Times New Roman", Font.BOLD, 14));
             JButton increaseButton = new JButton("+");
+            increaseButton.setPreferredSize(new Dimension(40,30));
+            increaseButton.setFont(new Font("Times New Roman", Font.BOLD,14));
+            increaseButton.setBackground(Color.pink);
+            increaseButton.setForeground(Color.black);
+            increaseButton.setFocusPainted(false);
+            increaseButton.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
+            increaseButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
             decreaseButton.addActionListener(e -> {
                 item.decreaseQuantity();
@@ -108,8 +136,15 @@ public class CartWindow extends JFrame {
             quantityPanel.add(increaseButton);
             itemPanel.add(quantityPanel);
 
-            JLabel priceLabel = new JLabel("Price: $" + item.getTotalPrice());
+            JLabel priceLabel = new JLabel("Price: $" + String.format("%.2f",item.getTotalPrice()));
             JButton removeButton = new JButton("Remove");
+            removeButton.setPreferredSize(new Dimension(60,30));
+            removeButton.setFont(new Font("Times New Roman", Font.PLAIN,14));
+            removeButton.setBackground(Color.pink);
+            removeButton.setForeground(Color.black);
+            removeButton.setFocusPainted(false);
+            removeButton.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
+            removeButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
             removeButton.addActionListener(e -> {
                 cart.removeItem(item.getProduct());
@@ -128,6 +163,6 @@ public class CartWindow extends JFrame {
 
     private void refreshCartItems() {
         loadCartItems();
-        totalPriceLabel.setText("Total: $" + calculateTotalPrice());
+        totalPriceLabel.setText("Total: $" + String.format("%.2f",calculateTotalPrice()));
     }
 }
