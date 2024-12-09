@@ -3,7 +3,7 @@
 
 
     public CupcakeShopUI() {
-#### Set font globally to Times New Roman
+##### Set font globally to Times New Roman
         Font timesNewRomanFont = new Font("Times New Roman", Font.PLAIN, 14);
         UIManager.put("Label.font", timesNewRomanFont);
         UIManager.put("Button.font", timesNewRomanFont);
@@ -19,21 +19,21 @@
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         getContentPane().setBackground(Color.decode("#D5ADEB"));
-### Using BorderLayout
+##### Using BorderLayout
         setLayout(new BorderLayout());
 
         JPanel productGridPanel = new JPanel(new BorderLayout());
         productGridPanel.setBackground(Color.decode("#D5ADEB"));
 
-### Top Panel (Logo and Cart)
+##### Top Panel (Logo and Cart)
         JPanel topPanel = createTopPanel();
         productGridPanel.add(topPanel, BorderLayout.NORTH);
 
-### Filter Panel
+##### Filter Panel
         addFilterPanel(productGridPanel);
 
 ### Product Display Area
-#### We use GridLayout for the Product Display
+##### We use GridLayout for the Product Display
         productPanel = new JPanel(new GridLayout(0, 3, 20, 20));
         productPanel.setBackground(Color.decode("#D8A6DB"));
         displayProducts(products);
@@ -257,21 +257,21 @@
         productItem.setBorder(new CompoundBorder(new LineBorder(Color.decode("#D5BDD5"), 1),
                 new EmptyBorder(10, 10, 10, 10)));
     
-       ### Product Image Centered
+##### Product Image Centered
         JLabel productImage = new JLabel(new ImageIcon(getClass().getResource("/" + product.getImagePath())));
         productImage.setPreferredSize(new Dimension(250, 250));
         productImage.setAlignmentX(Component.CENTER_ALIGNMENT);  // Centering image
     
-        // Product name in bold
+##### Product name in bold
         JLabel productLabel = new JLabel(product.getName(), SwingConstants.CENTER);
         productLabel.setFont(productLabel.getFont().deriveFont(Font.BOLD));  // Make product name bold
         productLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // Centering product name
     
-        // Price label centered
+##### Price label centered
         JLabel priceLabel = new JLabel("$" + String.format("%.2f", product.getPrice()), SwingConstants.CENTER);
         priceLabel.setAlignmentX(Component.CENTER_ALIGNMENT);  // Centering price
     
-        // Add to cart button centered
+##### Add to cart button centered
         JButton addToCartButton = new JButton("Add to Cart");
         addToCartButton.setPreferredSize(new Dimension(120, 30));
         addToCartButton.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -296,7 +296,7 @@
 ## Show Selection Dialog
 
     private void showSelectionDialog(Product product) {
-        // Create a dialog with checkboxes and quantity selectors for the available cupcakes
+##### Create a dialog with checkboxes and quantity selectors for the available cupcakes
         JPanel selectionPanel = new JPanel();
         selectionPanel.setLayout(new BoxLayout(selectionPanel, BoxLayout.Y_AXIS));
         selectionPanel.setBackground(Color.decode("#D8A6DB"));
@@ -304,7 +304,7 @@
         List<JSpinner> spinners = new ArrayList<>();
         List<String> cupcakeNames = product.getSelectableCupcakes();
         
-        // Create a spinner for each selectable cupcake
+##### Create a spinner for each selectable cupcake
         for (String cupcake : cupcakeNames) {
             JPanel cupcakePanel = new JPanel(new BorderLayout());
             cupcakePanel.setBackground(Color.decode("#D8A6DB"));
@@ -313,7 +313,7 @@
             cupcakeLabel.setBackground(Color.decode("#D8A6DB"));
             cupcakePanel.add(cupcakeLabel, BorderLayout.WEST);
         
-            // Spinner to choose quantity
+##### Spinner to choose quantity
             JSpinner spinner = new JSpinner(new SpinnerNumberModel(0, 0, 12, 1));  // Allow quantities from 0 to 12
             spinners.add(spinner);
             cupcakePanel.add(spinner, BorderLayout.EAST);
@@ -321,24 +321,24 @@
             selectionPanel.add(cupcakePanel);
         }
         
-        // Add an OK button to confirm the selection
+##### Add an OK button to confirm the selection
         JButton okButton = new JButton("Confirm Selection");
         okButton.addActionListener(e -> {
             List<String> selectedCupcakes = new ArrayList<>();
             int totalSelected = 0;
         
-            // Count the total number of selected cupcakes
+##### Count the total number of selected cupcakes
             for (int i = 0; i < cupcakeNames.size(); i++) {
                 int quantity = (int) spinners.get(i).getValue();  // Get the quantity from the spinner
                 totalSelected += quantity;
         
-                // Add the selected quantity of cupcakes to the selectedCupcakes list
+ ##### Add the selected quantity of cupcakes to the selectedCupcakes list
                 for (int j = 0; j < quantity; j++) {
                     selectedCupcakes.add(cupcakeNames.get(i));
                 }
             }
         
-            // Validate the number of selected cupcakes based on the product type
+##### Validate the number of selected cupcakes based on the product type
             if (product.getName().equals("Mini Trio") && totalSelected == 3) {
                 addSelectedCupcakesToCart(product, selectedCupcakes);
                 selectionDialog.dispose(); // Close the dialog
@@ -369,7 +369,7 @@
         
         selectionPanel.add(okButton);
         
-        // Create a dialog window for selecting cupcakes
+##### Create a dialog window for selecting cupcakes
         selectionDialog = new JDialog(this, "Select Cupcakes", true);
         selectionDialog.setLayout(new BorderLayout());
         selectionDialog.add(selectionPanel, BorderLayout.CENTER);
@@ -390,13 +390,13 @@
         cupcakeCount.put(cupcake, cupcakeCount.getOrDefault(cupcake, 0) + 1);
     }
 
-    // Convert to a list of strings with quantities for easier formatting
+##### Convert to a list of strings with quantities for easier formatting
     List<String> cupcakeEntries = new ArrayList<>();
     for (Map.Entry<String, Integer> entry : cupcakeCount.entrySet()) {
         cupcakeEntries.add(entry.getValue() + " " + entry.getKey());
     }
 
-    // Build an HTML string with line breaks after every few cupcakes
+##### Build an HTML string with line breaks after every few cupcakes
     StringBuilder selectedCupcakesText = new StringBuilder("<html>Selected:<br>");
     int cupcakesPerLine = 3;
     for (int i = 0; i < cupcakeEntries.size(); i++) {
@@ -418,17 +418,17 @@
         product.getCategory()
     );
 
-    // Set the description to the HTML formatted string
+##### Set the description to the HTML formatted string
     selectedBundleProduct.setSelectableCupcakes(new ArrayList<>(cupcakeCount.keySet()));
     selectedBundleProduct.setDescription(selectedCupcakesText.toString());
 
-    // Add the bundle (1 item) to the cart
+##### Add the bundle (1 item) to the cart
     cart.addItem(selectedBundleProduct, 1);
 
-    // Update the total price in the cart
+##### Update the total price in the cart
     totalLabel.setText("Total: $" + String.format("%.2f", cart.getTotalPrice()));
 
-    // Open the cart window to display the selected bundle
+##### Open the cart window to display the selected bundle
     openCartWindow();
 }
 
