@@ -4,14 +4,14 @@
 ## Purpose
 Our online cupcake store is designed to make it easy and fun for customers to browse and order cupcakes from the comfort of their homes. Whether you're looking for a cupcake for a special occasion or just to treat yourself, we have something for everyone!
 
-# Goal
+## 🎯 Goal
 Our goal is to make buying cupcakes online a simple, enjoyable, and seamless experience. With easy-to-use features like a search bar, filters, a shopping cart, and secure checkout, we want customers to have a smooth and satisfying shopping experience from start to finish.
     - Search & Filter
     - Cart & Checkout
     - Real-time Price Updates
     - Easy Checkout
 
-# Tools Used
+## 🔧 Tools Used
     - Java Swing: For GUI components and layout.
     - Cart and CartItem Class: Handle cart functionality and provides the total price of the order.
     - Product Class: Handles each product functionality (Name, Price, ImagePath, Category) and provide description of each product.
