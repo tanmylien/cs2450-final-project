@@ -1,6 +1,7 @@
 # Cupcake Shop GUI Group #10
 
-# Purpose
+## Group members: Aaron Aramburo, Natasha Budiman, Jennifer Pedomoro, Jennifer Garcia, My Lien Tan
+## Purpose
 Our online cupcake store is designed to make it easy and fun for customers to browse and order cupcakes from the comfort of their homes. Whether you're looking for a cupcake for a special occasion or just to treat yourself, we have something for everyone!
 
 # Goal
