@@ -19,132 +19,17 @@ Our goal is to make buying cupcakes online a simple, enjoyable, and seamless exp
 
 # Screenshots
     ![Screenshot 2024-12-08 222327](https://github.com/user-attachments/assets/321cf018-cc3f-4fcc-9ff0-682d6e78ca6e)
+    ![Screenshot 2024-12-08 222327](https://github.com/user-attachments/assets/4dcbf4c3-6026-4469-be83-af6763e3cbdf)
 
 
 
-# Code
-
-    public CupcakeShopUI() {
-##### Set font globally to Times New Roman
-        Font timesNewRomanFont = new Font("Times New Roman", Font.PLAIN, 14);
-        UIManager.put("Label.font", timesNewRomanFont);
-        UIManager.put("Button.font", timesNewRomanFont);
-        UIManager.put("TextField.font", timesNewRomanFont);
-        UIManager.put("RadioButton.font", timesNewRomanFont);
-        UIManager.put("Slider.font", timesNewRomanFont);
-
-        cart = new Cart();
-        products = createSampleProducts();
-
-        setTitle("Online Cupcake Store");
-        setSize(1175, 1000);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        getContentPane().setBackground(Color.decode("#D5ADEB"));
-##### Using BorderLayout
-        setLayout(new BorderLayout());
-
-        JPanel productGridPanel = new JPanel(new BorderLayout());
-        productGridPanel.setBackground(Color.decode("#D5ADEB"));
-
-##### Top Panel (Logo and Cart)
-        JPanel topPanel = createTopPanel();
-        productGridPanel.add(topPanel, BorderLayout.NORTH);
-
-##### Filter Panel
-        addFilterPanel(productGridPanel);
-
-### Product Display Area
-##### We use GridLayout for the Product Display
-        productPanel = new JPanel(new GridLayout(0, 3, 20, 20));
-        productPanel.setBackground(Color.decode("#D8A6DB"));
-        displayProducts(products);
-
-        JPanel productContainer = new JPanel(new BorderLayout());
-        productContainer.setBackground(Color.decode("#D8A6DB"));
-        productContainer.add(productPanel, BorderLayout.CENTER);
-        productContainer.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-
-        JScrollPane scrollPane = new JScrollPane(productContainer);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-
-        productGridPanel.add(scrollPane, BorderLayout.CENTER);
-        add(productGridPanel, BorderLayout.CENTER);
-        setVisible(true);
-    }
-## Top Panel
-    private JPanel createTopPanel() {
-        JPanel topPanel = new JPanel(new BorderLayout());
-        topPanel.setBackground(Color.decode("#D5ADEB"));
-
-        JLabel logo = new JLabel(new ImageIcon(getClass().getResource("/images/sugarpawsbakery.jpg")));
-        logo.setHorizontalAlignment(SwingConstants.CENTER);
-        topPanel.add(logo, BorderLayout.CENTER);
-
-        JLabel motto = new JLabel(new ImageIcon(getClass().getResource("/images/textlogo.png")));
-        motto.setHorizontalAlignment(SwingConstants.CENTER);
-        topPanel.add(motto, BorderLayout.WEST);
 
 
-
-        JPanel cartPanel = createCartPanel();
-        cartPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
-        topPanel.add(cartPanel, BorderLayout.EAST);
-
-        return topPanel;
-    }
-## Create Cart Panel
-    private JPanel createCartPanel() {
-        JPanel cartPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        cartPanel.setBackground(Color.decode("#D5ADEB"));
-
-        totalLabel = new JLabel("Total: $0.00");
-        JButton cartButton = createButtonWithIcon("Cart", "/icons/cart.png");
-        cartButton.setPreferredSize(new Dimension(100, 30));
-        cartButton.setBackground(Color.decode("#D5ADEB"));
-        cartButton.addActionListener(e -> openCartWindow());
-
-        cartPanel.add(totalLabel);
-        cartPanel.add(cartButton);
-
-        return cartPanel;
-    }
-
-## Create Search Panel
-
-    private JPanel createSearchPanel() {
-        JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        searchPanel.setBackground(Color.decode("#EDD7ED"));
-        searchPanel.setPreferredSize(new Dimension(250, 40));
-
-        searchField = new JTextField(12);
-        searchField.setBorder(BorderFactory.createCompoundBorder(searchField.getBorder(), BorderFactory.createEmptyBorder(5, 10, 5, 10)));
-        searchField.setPreferredSize(new Dimension(180, 30));
-        searchField.setBackground(Color.decode("#D5ADEB"));
-        searchField.setOpaque(true);
-
-        JButton searchButton = createButtonWithIcon("Search", "/icons/search.png");
-        searchButton.setPreferredSize(new Dimension(100, 30));
-        searchButton.setBackground(Color.decode("#EDD7ED"));
-        searchButton.addActionListener(e -> performSearch());
-
-        searchPanel.add(searchField);
-        searchPanel.add(searchButton);
-
-        return searchPanel;
-    }
-## Perform Search Function
-
-    private void performSearch() {
-        String searchText = searchField.getText().trim().toLowerCase();
-        List<Product> filteredProducts = new ArrayList<>();
-        for (Product product : products) {
-            if (product.getName().toLowerCase().contains(searchText)) {
-                filteredProducts.add(product);
-            }
-        }
-        displayProducts(filteredProducts);
-    }
+# Code Functions
+## createTopPanel() : Create top panel (set backgorunds, labels, and create Cart Panel)
+## createCartPanel() : Create Cart Panel (set backgrounds, labels, buttons)
+## createSearchPanel() : Create Search Panel (set backgrounds, search field, buttons)
+## performSearch() : Function to perform search feature 
 
 ## Add Filter Panel
 
