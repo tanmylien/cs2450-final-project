@@ -17,6 +17,11 @@ Our goal is to make buying cupcakes online a simple, enjoyable, and seamless exp
     - LocalDate: To calculate and format future pickup dates.
     - AWT and Swing Libraries: For styling, event handling, and layout management.
 
+# Screenshots
+    ![Screenshot 2024-12-08 222327](https://github.com/user-attachments/assets/321cf018-cc3f-4fcc-9ff0-682d6e78ca6e)
+
+
+
 # Code
 
     public CupcakeShopUI() {
