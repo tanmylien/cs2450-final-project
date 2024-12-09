@@ -52,6 +52,13 @@ Our goal is to make buying cupcakes online a simple, enjoyable, and seamless exp
 
 **Live Total Calculation**: Automatically update the total price as items are added or removed from the cart.
 
+## Project Structure
+    - `CupcakeShopUI.java`: Main class that initializes and manages the UI components for the cupcake store.
+    - `Product.java`: A class representing the individual cupcake products.
+    - `Cart.java and CartItem.java` : A class managing the cart functionality.
+    - `CheckoutWindow.java` : Manages Checkout window
+    - `CartWindow.java` : Manages cart window
+
 ## 📷 Screenshots
     ![image](Screenshot/1.png)
     ![Screenshot 2024-12-08 222327](https://github.com/user-attachments/assets/4dcbf4c3-6026-4469-be83-af6763e3cbdf)
