@@ -10,6 +10,13 @@ Our goal is to make buying cupcakes online a simple, enjoyable, and seamless exp
     - Real-time Price Updates
     - Easy Checkout
 
+# Tools Used
+    - Java Swing: For GUI components and layout.
+    - Cart and CartItem Class: Handle cart functionality and provides the total price of the order.
+    - Product Class: Handles each product functionality (Name, Price, ImagePath, Category) and provide description of each product.
+    - LocalDate: To calculate and format future pickup dates.
+    - AWT and Swing Libraries: For styling, event handling, and layout management.
+
 # Code
 
     public CupcakeShopUI() {
