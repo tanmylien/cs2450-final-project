@@ -43,7 +43,7 @@ Our goal is to make buying cupcakes online a simple, enjoyable, and seamless exp
 
 **Live Total Calculation**: Automatically update the total price as items are added or removed from the cart.
 
-# Screenshots
+## 📷 Screenshots
     ![Screenshot 2024-12-08 222327](https://github.com/user-attachments/assets/321cf018-cc3f-4fcc-9ff0-682d6e78ca6e)
     ![Screenshot 2024-12-08 222327](https://github.com/user-attachments/assets/4dcbf4c3-6026-4469-be83-af6763e3cbdf)
 
@@ -51,11 +51,11 @@ Our goal is to make buying cupcakes online a simple, enjoyable, and seamless exp
 
 
 
-# Code Functions
-## createTopPanel() : Create top panel (set backgorunds, labels, and create Cart Panel)
-## createCartPanel() : Create Cart Panel (set backgrounds, labels, buttons)
-## createSearchPanel() : Create Search Panel (set backgrounds, search field, buttons)
-## performSearch() : Function to perform search feature 
+## Code Functions
+### createTopPanel() : Create top panel (set backgorunds, labels, and create Cart Panel)
+### createCartPanel() : Create Cart Panel (set backgrounds, labels, buttons)
+### createSearchPanel() : Create Search Panel (set backgrounds, search field, buttons)
+### performSearch() : Function to perform search feature 
 
 ## Add Filter Panel
 
