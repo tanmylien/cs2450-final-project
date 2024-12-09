@@ -410,7 +410,7 @@
     }
     selectedCupcakesText.append("</html>");
 
-    // Create a new Product instance for the bundle
+### Create a new Product instance for the bundle
     Product selectedBundleProduct = new Product(
         product.getName(), 
         product.getPrice(), 
@@ -437,7 +437,7 @@
     
     
     
-    ## Create Button with Icon
+## Create Button with Icon
 
     private JButton createButtonWithIcon(String text, String iconPath) {
         JButton button = new JButton(text);
@@ -473,7 +473,7 @@
         productPanel.repaint();
     }
 
-    // Sample Data
+## Create Sample Products
     private List<Product> createSampleProducts() {
         List<Product> sampleProducts = new ArrayList<>();
         sampleProducts.add(new Product("Vanilla Dream", 4.99, "images/vanilladream.jpg", "Signature Flavors"));
@@ -493,7 +493,7 @@
 
 
         
-        // Add bundle products and define their selectable cupcakes
+### Add bundle products and define their selectable cupcakes
         Product jumboCupcake = new Product("Jumbo Cupcake", 19.99, "images/pickone.png", "Specials");
         jumboCupcake.setSelectableCupcakes(List.of(
         "Vanilla Dream", "Fudge Delight", "Strawberry Cake", "Red Velvet", 
