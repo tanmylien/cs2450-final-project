@@ -53,7 +53,7 @@ Our goal is to make buying cupcakes online a simple, enjoyable, and seamless exp
 **Live Total Calculation**: Automatically update the total price as items are added or removed from the cart.
 
 ## 📷 Screenshots
-    ![Screenshot 2024-12-08 222327](https://github.com/user-attachments/assets/321cf018-cc3f-4fcc-9ff0-682d6e78ca6e)
+    ![Screenshot](https://github.com/tanmylien/cs2450-final-project/blob/main/Screenshot/1.png)
     ![Screenshot 2024-12-08 222327](https://github.com/user-attachments/assets/4dcbf4c3-6026-4469-be83-af6763e3cbdf)
 
 
