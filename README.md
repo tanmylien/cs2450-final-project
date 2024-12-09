@@ -410,7 +410,7 @@
     }
     selectedCupcakesText.append("</html>");
 
-### Create a new Product instance for the bundle
+##### Create a new Product instance for the bundle
     Product selectedBundleProduct = new Product(
         product.getName(), 
         product.getPrice(), 
