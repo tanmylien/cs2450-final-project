@@ -26,17 +26,22 @@ Our goal is to make buying cupcakes online a simple, enjoyable, and seamless exp
 **Search Bar**: Quickly find your favorite cupcake by typing in its name.
 ### 🛒 Shopping Cart
 **Add to Cart**: Seamlessly add cupcakes to your cart with just one click.
+
 **Modify Quantities**: Adjust the quantity of each item directly within the cart.
+
 **Remove Items**: Easily remove items from your cart to update your order.
 ### 📦 Checkout
-	•	User Details: Input your name, address, and contact number for smooth order processing.
-	•	Order Options: Select your preferred pickup time, including an option to schedule future pickups.
+**User Details**: Input your name, address, and contact number for smooth order processing.
+
+**Order Options**: Select your preferred pickup time, including an option to schedule future pickups.
 ### 🎨 Modern Design
-	•	Intuitive Layout: A clean, visually pleasing design with pastel colors that enhance the user experience.
-	•	Responsive UI: Adapted for desktop and mobile platforms to ensure accessibility.
+**Intuitive Layout**: A clean, visually pleasing design with pastel colors that enhance the user experience.
+
+**Responsive UI**: Adapted for desktop and mobile platforms to ensure accessibility.
 ### 🔍 Additional Features
-	•	Price Filters: Filter products by price to suit your budget.
-	•	Live Total Calculation: Automatically update the total price as items are added or removed from the cart.
+**Price Filters**: Filter products by price to suit your budget.
+
+**Live Total Calculation**: Automatically update the total price as items are added or removed from the cart.
 
 # Screenshots
     ![Screenshot 2024-12-08 222327](https://github.com/user-attachments/assets/321cf018-cc3f-4fcc-9ff0-682d6e78ca6e)
