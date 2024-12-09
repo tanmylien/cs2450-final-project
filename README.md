@@ -1,6 +1,17 @@
 ﻿# cs2450-final-project
 # Cupcake Shop GUI Group #10
 
+# Purpose
+Our online cupcake store is designed to make it easy and fun for customers to browse and order cupcakes from the comfort of their homes. Whether you're looking for a cupcake for a special occasion or just to treat yourself, we have something for everyone!
+
+# Goal
+Our goal is to make buying cupcakes online a simple, enjoyable, and seamless experience. With easy-to-use features like a search bar, filters, a shopping cart, and secure checkout, we want customers to have a smooth and satisfying shopping experience from start to finish.
+    - Search & Filter
+    - Cart & Checkout
+    - Real-time Price Updates
+    - Easy Checkout
+
+# Code
 
     public CupcakeShopUI() {
 ##### Set font globally to Times New Roman
