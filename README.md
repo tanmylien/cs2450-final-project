@@ -7,7 +7,7 @@
 - [Screenshots](#-screenshots)
 - [Goal](#-goal)
 - [Tools Used](#-tools-used)
-- [Features](#features)
+- [Features](#-features)
 - [Code functions](#code-functions)
 
 ## ✨ Purpose
