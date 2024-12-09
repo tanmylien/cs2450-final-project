@@ -1,4 +1,3 @@
-﻿# cs2450-final-project
 # Cupcake Shop GUI Group #10
 
 # Purpose
