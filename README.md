@@ -19,13 +19,13 @@ Our goal is to make buying cupcakes online a simple, enjoyable, and seamless exp
     - AWT and Swing Libraries: For styling, event handling, and layout management.
 ## 📌 Features
 ### 🛍️ Product Catalog
-	• Browse Cupcakes: View a wide variety of delicious cupcakes with vibrant images and detailed pricing.
-	• Categories**: Filter cupcakes by categories like Signature Flavors, Seasonal Specials, and Price Range.
-Search Bar**: Quickly find your favorite cupcake by typing in its name.
+**Browse Cupcakes**: View a wide variety of delicious cupcakes with vibrant images and detailed pricing.
+**Categories**: Filter cupcakes by categories like Signature Flavors, Seasonal Specials, and Price Range.
+**Search Bar**: Quickly find your favorite cupcake by typing in its name.
 ### 🛒 Shopping Cart
-	•	Add to Cart: Seamlessly add cupcakes to your cart with just one click.
-	•	Modify Quantities: Adjust the quantity of each item directly within the cart.
-	•	Remove Items: Easily remove items from your cart to update your order.
+**Add to Cart**: Seamlessly add cupcakes to your cart with just one click.
+**Modify Quantities**: Adjust the quantity of each item directly within the cart.
+**Remove Items**: Easily remove items from your cart to update your order.
 ### 📦 Checkout
 	•	User Details: Input your name, address, and contact number for smooth order processing.
 	•	Order Options: Select your preferred pickup time, including an option to schedule future pickups.
