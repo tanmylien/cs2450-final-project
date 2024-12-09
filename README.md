@@ -236,6 +236,8 @@
         displayProducts(products);
     }
 
+## Create Custom Price Labels
+
     private Hashtable<Integer, JLabel> createCustomPriceLabels() {
         Hashtable<Integer, JLabel> labelTable = new Hashtable<>();
         labelTable.put(0, new JLabel("<$5"));
@@ -255,7 +257,7 @@
         productItem.setBorder(new CompoundBorder(new LineBorder(Color.decode("#D5BDD5"), 1),
                 new EmptyBorder(10, 10, 10, 10)));
     
-        // Product Image centered
+       ### Product Image Centered
         JLabel productImage = new JLabel(new ImageIcon(getClass().getResource("/" + product.getImagePath())));
         productImage.setPreferredSize(new Dimension(250, 250));
         productImage.setAlignmentX(Component.CENTER_ALIGNMENT);  // Centering image
