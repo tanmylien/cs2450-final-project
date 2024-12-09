@@ -3,7 +3,7 @@
 ## 👤 Group members: Aaron Aramburo, Natasha Budiman, Jennifer Pedomoro, Jennifer Garcia, My Lien Tan
 
 ## 📜 Table of Contents
-- [Purpose]
+- [Purpose](#-purpose)
 - [Screenshots](#-screenshots)
 - [Goal](#-goal)
 - [Tools Used](#-toolsused)
